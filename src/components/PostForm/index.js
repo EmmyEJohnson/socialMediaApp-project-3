@@ -37,9 +37,11 @@ const PostForm = () => {
     setComments("");
 
     axios
-      .post("http://localhost:5000/posts/add", formData)
-      .then((res) => setComments(res.data))
-      .catch((err) => {
+      .post("http://localhost:5000/memeposts/create", formData)
+      .then(res => {
+        console.log(res);
+      })
+      .catch(err => {
         console.log(err);
       });
   };

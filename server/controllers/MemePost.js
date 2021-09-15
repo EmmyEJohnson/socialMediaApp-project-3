@@ -1,5 +1,17 @@
 //Post Controller
 const db = require('../models');
+const multer = require('multer');
+
+const storage = multer.diskStorage({
+    destination: (req, file, callback) => {
+      callback(null, "./public/uploads/")
+    },
+    filename: (req, file, callback) => {
+      callback(null, file.originalname);
+    }
+  })
+
+  const upload = multer({storage: storage});
 
 //Index -GET-Presentational  (all of a resource)
 const index = (req,res) => {
@@ -40,14 +52,24 @@ const showComments = (req,res) => {
 
 //Create -POST- Functional (status code 201)
 const create = (req, res) => {
-    db.Post.create(req.body, (err, savedPost) => {
+    db.Post.create("/", upload.single("postImage"),(req.body, (err, savedPost) => {
         if (err) return console.log("Error in Post#create: ", err);
+
+        const newPostImage = new PostImages({
+            author: req.body.author,
+            postImage: req.file.originalname,
+            caption: req.body.caption,
+          });
+          newPostImage
+          .save()
+          .then(() => res.json("New Image Posted!"))
+          .catch((err) => res.status(400).json(`Error: ${err}`));
 
         return res.status(201).json({
             message: 'Success',
             data: savedPost,
         });
-    });
+    }));
 };
 
 //Create -POST- Functional (For Comments)
@@ -68,11 +90,12 @@ const createComment = (req, res) => {
 };
 
 //Update -PUT- Functional (id)
-const update = (req, res) => {
+const update = ("/update/:id", upload.single("postImage"), (req, res) => {
     db.Post.findByIdAndUpdate(
         req.params.id,
         req.body,
         {new: true},
+        req.file.originalname,
         (err, updatedPost) => {
             if (err) console.log("Error in Post#update:", err);
 
@@ -81,7 +104,7 @@ const update = (req, res) => {
             });
         }
     );
-};
+});
 
 //Update -PUT- Functional (for Comments)
 const updateComments = (req, res) => {
