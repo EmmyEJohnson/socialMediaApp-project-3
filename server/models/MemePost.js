@@ -11,11 +11,12 @@ const commentSchema = new mongoose.Schema(
 
 const memePostSchema = new mongoose.Schema(
   {
-    img: { type: Buffer, contentType: String },
-    author: { type: Schema.Types.ObjectId, ref: 'User' },
+    name: { type: String, trim: true },
+    image: { type: String, trim: true, required: true },
+    // author: { type: Schema.Types.ObjectId, ref: 'User' },
     caption: { type: String },
-    comments: [commentSchema],
-    date: { type: Date, default: Date.now },
+    // comments: [commentSchema],
+    // date: { type: Date, default: Date.now },
   },
   { timestamps: true }
 );
