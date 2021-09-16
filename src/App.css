@@ -40,6 +40,7 @@
 #welcome {
   color: white;
   text-align: center;
+  margin-top: 2%;
 }
 
 /* lines background */
@@ -107,22 +108,6 @@ body {
   100% {
     top: 110%; } }
 
-
-    /* @media only screen and (max-width: 700px) {
-      body {
-        background-color: rgb(2, 2, 46);
-        }
-      .signUp-text {
-        font-size: 12px;
-      }
-      .signUp-form {
-    
-      }
-      .signUp-h3 {
-    
-      }
-    
-      } */
 
 
 /* Moon, clouds and twinkling stars background */
