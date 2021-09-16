@@ -4,7 +4,7 @@ import tellMemifyto from './tellMemifyto';
 
 //check with J. Flores work to see what he names comment folder/files
 
-import tellMemeifyto from "./tellMemeifyto";
+
 
 const getAll = () => {
     return tellMemeifyto.get("/memeposts");
