@@ -3,7 +3,7 @@ import React from 'react';
 import Dislikes from './components/Dislike';
 import Likes from './components/Likes';
 import Nav from './components/Nav';
-import PostForm from './components/PostForm';
+
 
 // define our Welcome functional component
 function Welcome() {

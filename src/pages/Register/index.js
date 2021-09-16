@@ -49,7 +49,7 @@ const Register = () => {
           onChange={(e) => setFirstName(e.target.value)}
           value={firstName}
           minlength="2"
-          maxlength="20"
+          maxlength="50"
           required
         />
         <input
