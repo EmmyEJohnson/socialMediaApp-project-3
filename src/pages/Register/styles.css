@@ -1,40 +1,51 @@
-/* .signUp-Container {
-  position: absolute;
-  width: 1680px;
-  height: 960px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important; }
+  
+  /* .signUp-Container {
+    position: relative;
+    width: 1680px;
+    height: 960px;
+    left: 80px;
+    top: 1200px;
+  
+    background: #ffffff;
+  } */
+  
+  .signUp-text {
+  /* position: absolute; */
+  text-align: center;
+  color:aliceblue;
+  margin-top: 5%;
+  /* width: 686px;
   left: 80px;
-  top: 1200px;
-
-  background: #ffffff;
-} */
-
-.signUp-text {
-  position: absolute;
-  width: 686px;
-  left: 80px;
-  top: 350px;
+  top: 350px; */
 }
 
 .signUp-form {
-  position: absolute;
+  /* position: absolute; */
   width: 600px;
-  height: 439px;
-  left: 850px;
-  top: 220px;
+  height: 425px;
+  /* left: 850px;
+  top: 220px; */
+  margin: auto;
+  margin-top: 2%;
+  text-align: center;
 
-  background: #ffffff;
+  background: #b3abab;
   border: 1px solid rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
   border-radius: 0.5rem;
 }
 
 .signUp-h3 {
-  position: absolute;
+  /* position: absolute; */
   width: 558px;
   height: 36px;
   left: 78px;
   top: 32px;
-
+  margin-top: 2%;
   /* Body H3 */
 
   font-family: Montserrat;
@@ -50,12 +61,12 @@
 }
 
 .signUp-firstName {
-  position: absolute;
+  /* position: absolute; */
   width: 237px;
   height: 40px;
   left: 78px;
   top: 130px;
-
+  margin: 2%;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
@@ -63,12 +74,12 @@
 }
 
 .signUp-lastName {
-  position: absolute;
+  /* position: absolute; */
   width: 237px;
   height: 40px;
   left: 330px;
   top: 130px;
-
+  margin: 2%;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
@@ -76,12 +87,12 @@
 }
 
 .signUp-email {
-  position: absolute;
+  /* position: absolute; */
   width: 494px;
   height: 40px;
   left: 78px;
   top: 200px;
-
+  margin-top: 5%;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
@@ -89,12 +100,12 @@
 }
 
 .signUp-password {
-  position: absolute;
+  /* position: absolute; */
   width: 494px;
   height: 40px;
   left: 78px;
   top: 271px;
-
+  margin-top: 5%;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
@@ -102,10 +113,11 @@
 }
 
 .signup-button {
-  position: absolute;
+  /* position: absolute; */
   width: 130px;
   height: 40px;
   left: 78px;
   top: 335px;
+  margin-top: 8%;
   border-radius: 0.5rem;
 }
