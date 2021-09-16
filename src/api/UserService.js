@@ -10,6 +10,8 @@ const login = (data) => {
   return tellMemifyto.post('/auth/login', data);
 };
 
+// const logout = (data)
+
 function getUser() {
   let user = tokenService.getUserFromToken();
   console.log('DECODED USER FROM GET USER FUNCTION IN USER SERVICE: ', user);

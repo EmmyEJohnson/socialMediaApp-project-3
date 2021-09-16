@@ -48,24 +48,36 @@ const Register = () => {
           placeholder="First Name"
           onChange={(e) => setFirstName(e.target.value)}
           value={firstName}
+          minlength="2"
+          maxlength="20"
+          required
         />
         <input
           className="signUp-lastName"
           placeholder="Last Name"
           onChange={(e) => setLastName(e.target.value)}
           value={lastName}
+          minlength="2"
+          maxlength="20"
+          required
         />
         <input
           className="signUp-email"
           placeholder="Email Address"
           onChange={(e) => setEmail(e.target.value)}
           value={email}
+          type="email"
+          required
         />
         <input
           className="signUp-password"
           placeholder="Create Password"
+          type="password"
           onChange={(e) => setPassword(e.target.value)}
           value={password}
+          type="password"
+          minlength="5"
+          required
         />
         <button type="submit" className="signup-button" onClick={handleSubmit}>
           Register

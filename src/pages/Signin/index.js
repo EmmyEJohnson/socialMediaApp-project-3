@@ -27,7 +27,7 @@ const Signin = () => {
       setToken(token);
       setEmail('');
       setPassword('');
-      history.push('/');
+      history.push('/profile');
     } else {
       alert('Server Error enter valid creds');
     }
@@ -43,12 +43,19 @@ const Signin = () => {
           placeholder="Email Address"
           onChange={(e) => setEmail(e.target.value)}
           value={email}
+          minlength="2"
+          maxlength="20"
+          required
         />
         <input
           className="signIn-password"
-          placeholder="Create Password"
+          placeholder="Enter Password"
+          placeholder="Password"
+          type='password'
           onChange={(e) => setPassword(e.target.value)}
           value={password}
+          type="password"
+          required
         />
         <button type="submit" className="signIn-button" onClick={handleSubmit}>
           Sign In

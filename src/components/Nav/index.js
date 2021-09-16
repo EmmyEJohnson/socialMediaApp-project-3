@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Route, Switch } from 'react-router-dom';
 import Register from '../../pages/Register';
 import Signin from '../../pages/Signin';
+import Profile from '../../pages/Profile';
 
 const Nav = () => {
   const navStyle = {
@@ -15,10 +16,12 @@ const Nav = () => {
         <Link to="/">Home</Link>
         <Link to="/register">Register</Link>
         <Link to="/signin">Login</Link>
+        {/* <Link to="/profile">profile</Link> */}
       </nav>
       <Switch>
         <Route path="/register" render={(props) => <Register {...props} />} />
         <Route path="/signin" render={(props) => <Signin {...props} />} />
+        <Route path="/profile" render={(props) => <Profile {...props} />} />
       </Switch>
     </div>
   );

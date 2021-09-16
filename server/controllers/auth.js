@@ -4,10 +4,27 @@ const SECRET = process.env.SECRET;
 const db = require('../models');
 const bcrypt = require('bcrypt');
 //const createJWT = require('./helpers');
+const Joi = require('joi');
 
 const login = async (req, res) => {
   console.log('login controller');
   const { email, password } = req.body;
+
+  const schema = Joi.object({
+    email: Joi.string().email().required(),
+    password: Joi.string().required(),
+  });
+
+  const { value, error } = schema.validate(req.body, { abortEarly: false });
+
+  console.log(error);
+
+  if (error) {
+    return res.status(400).send({
+      message: error.details[0].message,
+    });
+  }
+
   // look for user via email
   let foundUser = await db.User.findOne({ email });
 

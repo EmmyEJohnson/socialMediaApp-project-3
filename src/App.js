@@ -12,10 +12,9 @@ function Welcome() {
     // Make sure to return some UI
     <div>
       <Nav />
-      <PostForm />
       <h1>Welcome to Memeify!</h1>
       <Likes />
-      <Dislikes />
+      <Dislikes /> 
     </div>
   );
 }

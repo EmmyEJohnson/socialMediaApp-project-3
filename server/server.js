@@ -5,13 +5,16 @@ require('./models/index');
 const path = require('path');
 const express = require('express');
 const cors = require('cors');
-const multer = require('multer');
+const bodyParser = require('body-parser');
 
 /* ==== Internal Modules ==== */
 const routes = require('./routes');
 
 /* ==== Instanced Modules  ==== */
 const app = express();
+
+//use uploads folder to save image
+app.use('/uploads', express.static('uploads'));
 
 /* ====  Configuration  ==== */
 const PORT = process.env.PORT || 5000;
