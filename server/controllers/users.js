@@ -19,8 +19,8 @@ const create = (req, res) => {
   console.log('body');
 
   const schema = Joi.object({
-    firstName: Joi.string().min(3).max(20).required(),
-    lastName: Joi.string().min(3).max(20).required(),
+    firstName: Joi.string().min(3).max(50).required(),
+    lastName: Joi.string().min(3).max(50).required(),
     email: Joi.string().email().required(),
     password: Joi.string().min(5).required(),
   }).options({ abortEarly: false });
