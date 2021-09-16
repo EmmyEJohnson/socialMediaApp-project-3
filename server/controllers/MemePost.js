@@ -30,7 +30,8 @@ const createMemePost = (req, res) => {
     comments: comments,
   });
 
-
+  console.log(memepost)
+  
   memepost.save((err, memepost) => {
     if (err) {
       return res.status(400).json({
