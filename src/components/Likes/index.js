@@ -12,15 +12,21 @@ import {LikeTwoTone} from '@ant-design/icons';
 function Likes() {
     
     const [upVotes, setUpvotes] = useState(0);
+    const [disable, setDisable] = useState(false);
 
     useEffect(() => {
 
     }, [upVotes]);
 
+    const handleClick = () => {
+        setUpvotes(upVotes + 1)
+        setDisable(true)
+    }
+
 
     return (
         <div>
-            <button onClick={() => setUpvotes(upVotes + 1)}
+            <button  disabled={disable} onClick={handleClick}
             ><LikeTwoTone /></button>
             <p>This post has {upVotes} likes!</p>
         </div>
