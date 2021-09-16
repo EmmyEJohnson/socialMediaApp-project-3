@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const commentSchema = new mongoose.Schema(
   {
-    author: { type: Schema.Types.ObjectId, ref: 'User' },
+    author: { type: String },
     content: { type: String },
   },
   { timestamps: true }
@@ -13,10 +13,10 @@ const memePostSchema = new mongoose.Schema(
   {
     name: { type: String, trim: true },
     image: { type: String, trim: true, required: true },
-    // author: { type: Schema.Types.ObjectId, ref: 'User' },
+    //author: { type: Schema.Types.ObjectId, ref: 'User' },
     caption: { type: String },
-    // comments: [commentSchema],
-    // date: { type: Date, default: Date.now },
+    comments: [commentSchema],
+    author: {type: String},
   },
   { timestamps: true }
 );
