@@ -12,8 +12,6 @@ function Welcome() {
     <div>
       <Nav />
       <h1>Welcome to Meme-ification!</h1>
-      <Likes />
-      <Dislikes /> 
     </div>
   );
 }
