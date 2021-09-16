@@ -7,7 +7,7 @@ import tellMemifyto from './tellMemifyto';
 
 
 const getAll = () => {
-    return tellMemeifyto.get("/memeposts");
+    return tellMemifyto.get("/memeposts");
 };
 
 const get = (id) => {
