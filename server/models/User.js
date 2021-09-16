@@ -10,11 +10,7 @@ const userSchema = new mongoose.Schema(
     lastName: { type: String, required: true, minlength: 2, maxlength: 50 },
     email: { type: String, required: true, unique: true },
     password: { type: String, required: true, minlength: 5 },
-    favoriteMeme: {
-      data: Buffer,
-      contentType: String,
-    },
-    interests: [{ type: String }],
+   
   },
   {
     timestamps: true,
