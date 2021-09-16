@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import Register from '../../pages/Register';
 import Signin from '../../pages/Signin';
 import Profile from '../../pages/Profile';
+import HomePage from '../../pages/HomePage';
 
 const Nav = () => {
   const navStyle = {
@@ -22,6 +23,8 @@ const Nav = () => {
         <Route path="/register" render={(props) => <Register {...props} />} />
         <Route path="/signin" render={(props) => <Signin {...props} />} />
         <Route path="/profile" render={(props) => <Profile {...props} />} />
+        {/* HomePage route/props/component, which displays posts components! */}
+        <HomePage />
       </Switch>
     </div>
   );
