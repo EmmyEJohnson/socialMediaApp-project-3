@@ -43,8 +43,6 @@ const Signin = () => {
           placeholder="Email Address"
           onChange={(e) => setEmail(e.target.value)}
           value={email}
-          minlength="2"
-          maxlength="20"
           required
         />
         <input
