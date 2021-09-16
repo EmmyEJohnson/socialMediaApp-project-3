@@ -16,7 +16,7 @@
   .signUp-text {
   /* position: absolute; */
   text-align: center;
-  color:aliceblue;
+  color:rgb(211, 217, 222);
   margin-top: 5%;
   /* width: 686px;
   left: 80px;
@@ -121,3 +121,80 @@
   margin-top: 8%;
   border-radius: 0.5rem;
 }
+
+@media only screen and (max-width: 700px) {
+  body {
+    background-color: rgb(2, 2, 46);
+    }
+  .signUp-text {
+    font-size: 30px;
+  }
+  .signUp-form {
+    width: 500px;
+    height: 425px;
+    text-align: center;
+  }
+  .signUp-h3 {
+    width: 500px;
+    height: 36px;
+    font-size: 24px;
+    text-align: center;
+  }
+  .signUp-firstName {
+  }
+  .signUp-lastName {
+  }
+  .signUp-email {
+    width: 400px;
+    height: 40px;
+  }
+  .signUp-password {
+    width: 400px;
+    height: 40px;
+  }
+
+  }
+
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: rgb(2, 2, 46);
+      }
+    .signUp-text {
+      font-size: 20px;
+    }
+    .signUp-form {
+      width: 400px;
+      height: 350px;
+      text-align: center;
+    }
+    .signUp-h3 {
+      width: 400px;
+      height: 36px;
+      font-size: 25px;
+      text-align: center;
+    }
+    .signUp-firstName {
+      width: 200px;
+      height: 30px;
+      font-size: 14px;
+    }
+    .signUp-lastName {
+      width: 200px;
+      height: 30px;
+      font-size: 14px;
+    }
+    .signUp-email {
+      width: 300px;
+      height: 35px;
+    }
+    .signUp-password {
+      width: 300px;
+      height: 35px;
+    }
+    .signup-button {
+      width: 100px;
+      height: 38px;
+      margin-top: 6%;
+    }
+  
+    }

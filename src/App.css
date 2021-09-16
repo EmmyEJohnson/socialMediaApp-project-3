@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,7 +35,7 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 #welcome {
   color: white;
@@ -106,6 +106,23 @@ body {
     top: -50%; }
   100% {
     top: 110%; } }
+
+
+    /* @media only screen and (max-width: 700px) {
+      body {
+        background-color: rgb(2, 2, 46);
+        }
+      .signUp-text {
+        font-size: 12px;
+      }
+      .signUp-form {
+    
+      }
+      .signUp-h3 {
+    
+      }
+    
+      } */
 
 
 /* Moon, clouds and twinkling stars background */
