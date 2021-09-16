@@ -9,6 +9,7 @@ const validation = require('../middlewares/validation');
 
 //let's try it
 router.post('/', uploadMulter, validation, createMemePost);
+// router.get("/", posts.index); // JARED ADDED
 
 // router.post('')
 
