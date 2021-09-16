@@ -11,9 +11,9 @@ function Welcome() {
     // Make sure to return some UI
     <div>
       <Nav />
-      {/* <h1>Welcome to Meme-ification!</h1>
+      <h1>Welcome to Meme-ification!</h1>
       <Likes />
-      <Dislikes /> */}
+      <Dislikes /> 
     </div>
   );
 }

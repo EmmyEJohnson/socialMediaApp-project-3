@@ -13,13 +13,19 @@ import {DislikeTwoTone} from '@ant-design/icons';
 
 function Dislikes() {
     const [disLikes, setDislikes] = useState(0);
+    const [disable, setDisable] = useState(false);
     useEffect(() => {
 
     }, [disLikes]);
 
+    const handleClick = () => {
+        setDislikes(disLikes - 1);
+        setDisable(true);
+    }
+
     return (
         <div>
-             <button onClick={() => setDislikes(disLikes - 1)}
+             <button disabled={disable} onClick={handleClick}
             ><DislikeTwoTone /></button>
             <p>This post has {disLikes} Dislikes =(</p>
         </div>
