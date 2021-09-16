@@ -8,7 +8,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 // import { func } from "prop-types";
-// import * as PostService from "../../api/PostService";
+import * as PostService from "../../api/PostService";
 import styled from 'styled-components';
 import "./styles.css";
 
@@ -34,10 +34,11 @@ const PostForm = () => {
     
     setAuthor("");
     setCaption("");
-    setComments("");
+    // setComments("");
+    setFileName("");
 
     axios
-      .post("http://localhost:5000/memeposts/create", formData)
+      .post("http://localhost:5000/api", formData)
       .then(res => {
         console.log(res);
       })
