@@ -15,7 +15,7 @@ const Nav = () => {
       <nav style={navStyle}>
         <Link to="/">Home</Link>
         <Link to="/register">Register</Link>
-        <Link to="/signin">Login</Link>
+        <Link to="/signin">Login!</Link>
         {/* <Link to="/profile">profile</Link> */}
       </nav>
       <Switch>
