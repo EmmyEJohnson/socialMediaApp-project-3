@@ -1,45 +1,46 @@
-//NOTES:
-//need to check type for edit img text? blob? 
+//NOTES: 
 //use caption or content?
-//check all comments to match up with Jonathon Flores comments work
+//check to match up with Jonathon Flores comments work
 
 import React, { useState, useEffect } from "react";
 import Likes from "../Likes";
 import Dislikes from "../Dislike";
-import * as MemePostService from "../../api/MemePostService";
+import * as PostService from "../../api/PostService";
 import { func, string, array } from "prop-types";
 import "./styles.css";
+import { Link } from "react-router-dom";
 // import Comment from "../Comment";
 // import CommentForm from "../CommentForm";
 
-function MemePost({ id, getPostsAgain, img, author, caption, postComments }) {
+function Post({ id, getPostsAgain, postImage, author, caption, postComments }) {
   const [isEditing, setIsEditing] = useState(false);
-  const [editedImg, setImg] = useState(img);
   const [editedAuthor, setAuthor] = useState(author);
-  const [editedCaption, setCaption] = useState(caption); //caption or content? *************
+  const [editedCaption, setCaption] = useState(caption);
   const [comments, setComments] = useState([]);
+  const [fileName, setFileName] = useState("");
+
 
   const handleEdit = async () => {
     setIsEditing(!isEditing);
     
     if (isEditing) {
         let editedPost = {
-            img: editedImg,
+            postImage: fileName,
             author: editedAuthor,
-            caption: editedCaption, //caption or content? *********************
+            caption: editedCaption, 
         };
-        await MemePostService.update(id, editedPost);
+        await PostService.update(id, editedPost);
         getPostsAgain();
     }
 };
 
 const handleDelete = async () => {
-  await MemePostService.remove(id);
+  await PostService.remove(id);
   getPostsAgain();
 };
 
 async function fetchComments(id) {
-  let res = await MemePostService.getAllComments(id);
+  let res = await PostService.getAllComments(id);
   if (res.status === 200) {
       setComments(res.data.data);
   }
@@ -50,16 +51,25 @@ useEffect(() => {
 }, []);
 
 return (
-  <div>
+    <div>
+    {/* {posts.map((post, key) => (
+      <div className="container" key={key}>
+          <img
+          src={`/uploads/${post.postImage}`}
+          alt="..."
+          style={{ width: "40%" }}
+          /> */}
+    
+
       <div>
-          {!isEditing && <h1>{img}</h1>}
+          {!isEditing && <h1>{postImage}</h1>}
           {isEditing && (
               <input
-                  onChange={(e) => setImg(e.target.value)}
-                  value={editedImg}
-                  type="text"  // blob?***************************************************
-                  name="img"
-                  placeholder="Image goes here"
+                  onChange={(e) => setFileName(e.target.value[0])}
+                  value={fileName}
+                  type="file" 
+                  name="postImage"
+                  placeholder="Upload"
               />
           )}
           <div>
@@ -85,7 +95,7 @@ return (
                 {isEditing && (
                     <input
                         onChange={(e) => setcaption(e.target.value)}
-                        value={editedCaption} // caption or content? *************
+                        value={editedCaption} 
                         type="text"
                         name="caption"
                         placeholder="Caption"
@@ -120,20 +130,20 @@ return (
             />
         </div>
     );
-
+    
 }
 
-MemePost.propTypes = {
+Post.propTypes = {
   id: string.isRequired,
-  img: string.isRequired,
+  postImage: string.isRequired,
   author: string.isRequired,
   caption: string.isRequired, // caption or content? ************
   postComments: array,
   getPostsAgain: func,
 };
 
-MemePost.defaultProps = {
-  author: "Memeify Me",
+Post.defaultProps = {
+  author: "Memeify Me", //change default author?
 };
 
-export default MemePost;
+export default Post;
