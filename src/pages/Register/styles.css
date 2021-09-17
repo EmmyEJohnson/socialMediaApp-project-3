@@ -1,39 +1,42 @@
-/* .signUp-Container {
-  position: absolute;
-  width: 1680px;
-  height: 960px;
-  left: 80px;
-  top: 1200px;
-
-  background: #ffffff;
-} */
-
-.signUp-text {
-  position: absolute;
-  width: 686px;
-  left: 80px;
-  top: 350px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important; }
+  
+  /* .signUp-Container {
+    position: relative;
+    width: 1680px;
+    height: 960px;
+    left: 80px;
+    top: 1200px;
+  
+    background: #ffffff;
+  } */
+  
+  .signUp-text {
+  text-align: center;
+  color:rgb(211, 217, 222);
+  margin-top: 5%;
 }
 
 .signUp-form {
-  position: absolute;
   width: 600px;
-  height: 439px;
-  left: 850px;
-  top: 220px;
-
-  background: #ffffff;
+  height: 425px;
+  margin: auto;
+  margin-top: 2%;
+  text-align: center;
+  background: #b3abab;
   border: 1px solid rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
   border-radius: 0.5rem;
 }
 
 .signUp-h3 {
-  position: absolute;
   width: 558px;
   height: 36px;
   left: 78px;
   top: 32px;
+  margin-top: 2%;
 
   /* Body H3 */
 
@@ -42,20 +45,16 @@
   font-weight: bold;
   font-size: 24px;
   line-height: 36px;
-  /* identical to box height, or 150% */
-
   letter-spacing: -0.015em;
-
   color: #000000;
 }
 
 .signUp-firstName {
-  position: absolute;
   width: 237px;
   height: 40px;
   left: 78px;
   top: 130px;
-
+  margin: 2%;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
@@ -63,12 +62,11 @@
 }
 
 .signUp-lastName {
-  position: absolute;
   width: 237px;
   height: 40px;
   left: 330px;
   top: 130px;
-
+  margin: 2%;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
@@ -76,12 +74,11 @@
 }
 
 .signUp-email {
-  position: absolute;
   width: 494px;
   height: 40px;
   left: 78px;
   top: 200px;
-
+  margin-top: 5%;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
@@ -89,12 +86,11 @@
 }
 
 .signUp-password {
-  position: absolute;
   width: 494px;
   height: 40px;
   left: 78px;
   top: 271px;
-
+  margin-top: 5%;
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.5);
   box-sizing: border-box;
@@ -102,10 +98,83 @@
 }
 
 .signup-button {
-  position: absolute;
   width: 130px;
   height: 40px;
   left: 78px;
   top: 335px;
+  margin-top: 8%;
   border-radius: 0.5rem;
 }
+
+@media only screen and (max-width: 700px) {
+  body {
+    background-color: rgb(2, 2, 46);
+    }
+  .signUp-text {
+    font-size: 30px;
+  }
+  .signUp-form {
+    width: 500px;
+    height: 425px;
+    text-align: center;
+  }
+  .signUp-h3 {
+    width: 500px;
+    height: 36px;
+    font-size: 24px;
+    text-align: center;
+  }
+  .signUp-email {
+    width: 400px;
+    height: 40px;
+  }
+  .signUp-password {
+    width: 400px;
+    height: 40px;
+  }
+
+  }
+
+  @media only screen and (max-width: 600px) {
+    body {
+      background-color: rgb(2, 2, 46);
+      }
+    .signUp-text {
+      font-size: 20px;
+    }
+    .signUp-form {
+      width: 400px;
+      height: 350px;
+      text-align: center;
+    }
+    .signUp-h3 {
+      width: 400px;
+      height: 36px;
+      font-size: 25px;
+      text-align: center;
+    }
+    .signUp-firstName {
+      width: 200px;
+      height: 30px;
+      font-size: 14px;
+    }
+    .signUp-lastName {
+      width: 200px;
+      height: 30px;
+      font-size: 14px;
+    }
+    .signUp-email {
+      width: 300px;
+      height: 35px;
+    }
+    .signUp-password {
+      width: 300px;
+      height: 35px;
+    }
+    .signup-button {
+      width: 100px;
+      height: 38px;
+      margin-top: 6%;
+    }
+  
+    }

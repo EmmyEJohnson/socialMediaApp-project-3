@@ -40,7 +40,7 @@ const Register = () => {
 
   return (
     <div>
-      <h1 className="signUp-text">Largest Community of Meme Enthusiast</h1>
+      <h1 className="signUp-text">Largest Community of Meme Enthusiasts</h1>
       <div className="signUp-form">
         <h3 className="signUp-h3">Sign Up</h3>
         <input
