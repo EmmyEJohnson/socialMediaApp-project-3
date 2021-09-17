@@ -25,8 +25,9 @@ const HomePage = () => {
     async function fetchPosts() {
         let res = await MemePostService.getAll();
         if (res.status === 200) {
-            console.log(res) // JARED: Not hitting an API route, gives NOT AN API ROUTE error
-//            setPosts(res.data.data.reverse());
+            console.log(res.data.data) // JARED: Not hitting an API route, gives NOT AN API ROUTE error
+
+//
         }
     }
 

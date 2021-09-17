@@ -42,6 +42,18 @@ const createMemePost = (req, res) => {
     });
   });
 };
-module.exports = {
-  createMemePost,
+
+// Index - GET - Presentational (all of one resource) // JARED ADDED
+const index = (req, res) => {
+  db.Post.find({}, (err, foundPosts) => {
+      if (err) return console.log("Error in Posts#index:", err);
+
+      return res.status(200).json({
+          message: "Success",
+          data: foundPosts,
+      });
+  });
 };
+
+
+module.exports = { createMemePost, index };
