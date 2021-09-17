@@ -18,8 +18,12 @@ function Welcome() {
 <div class="clouds"></div>
 </div> */}
     <div>
-      <h1 id="welcome">Welcome to Memeify!</h1><br></br>
-      <Nav />
+      <h1 id="welcome">Welcome to Memeify!</h1>
+      <br></br>
+      <br></br>
+      <Nav /><br></br>
+      <h2 className="sub-title" id="h2-1">Post A Photo</h2><br></br>
+      <h2 className="sub-title" id="h2-2">Let The Community Jokes Become Your Caption</h2>
       {/* <Likes />
       <Dislikes />  */}
     </div>

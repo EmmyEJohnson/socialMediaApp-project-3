@@ -43,6 +43,16 @@
   margin-top: 2%;
 }
 
+.sub-title {
+  color: white;
+  text-align: center;
+  margin-top: 2%;
+}
+
+#h2-1 {
+  margin-top: 10%;
+}
+
 /* lines background */
 
 * {
