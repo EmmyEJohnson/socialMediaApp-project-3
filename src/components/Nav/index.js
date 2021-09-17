@@ -4,6 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import Register from '../../pages/Register';
 import Signin from '../../pages/Signin';
 import Profile from '../../pages/Profile';
+import HomePage from '../../pages/HomePage';
 
 const Nav = () => {
   const navStyle = {
@@ -21,7 +22,7 @@ const Nav = () => {
       <Switch>
         <Route path="/register" render={(props) => <Register {...props} />} />
         <Route path="/signin" render={(props) => <Signin {...props} />} />
-        <Route path="/profile" render={(props) => <Profile {...props} />} />
+        <Route path="/homepage" render={(props) => <HomePage {...props} />} />
       </Switch>
     </div>
   );

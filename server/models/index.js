@@ -14,6 +14,6 @@ db.once('open', () => {
 });
 
 module.exports = {
-  User: require('./user'),
-  Post: require('./MemePost')
+  User: require('./User'),
+  Post: require('./MemePost'),
 };
