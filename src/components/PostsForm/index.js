@@ -90,7 +90,7 @@ const PostsForm = ({getPostsAgain}) => {
         onChange={handleUpload}
         type="file"
         />
-         <button type="submit" className="btn btn-primary w-100">
+         <button type="submit" className="postform-submit-btn">
           {' '}
           Submit{' '}
         </button>

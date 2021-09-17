@@ -4,6 +4,7 @@ import PostsForm from '../../components/PostsForm';
 import * as MemePostService from '../../api/MemePostService';
 import { getUser } from '../../api/UserService';
 import Logout from '../../components/Logout';
+import './styles.css'
 
 const HomePage = () => {
   const [posts, setPosts] = useState([]);
@@ -27,8 +28,8 @@ const HomePage = () => {
         <PostsForm getPostsAgain={() => fetchPosts()} />
         {posts.map((post) => {
           return (
-            <Posts
-              user={user}
+            <Posts className="homepage-posts"
+              user={user} 
               author={post.author}
               caption={post.caption}
               content={post.content}
