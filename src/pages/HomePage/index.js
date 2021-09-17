@@ -25,9 +25,7 @@ const HomePage = () => {
     async function fetchPosts() {
         let res = await MemePostService.getAll();
         if (res.status === 200) {
-            console.log(res.data.data) // JARED: Not hitting an API route, gives NOT AN API ROUTE error
-
-//
+            setPosts(res.data.data);
         }
     }
 
@@ -40,15 +38,17 @@ const HomePage = () => {
             <div>
 
                 <Posts getPostsAgain={() => fetchPosts()} />
-                {posts.map((posts) => {
+                {posts.map((post) => {
 
                     return (
                         <Posts
-                            caption={posts.caption}
-                            id={posts._id}
+                            name={post.name}
+                            caption={post.caption}
+                            key={post._id}
+                            id={post._id}
                             getPostsAgain={() => fetchPosts()}
                         />
-                    );
+                    ); 
                 })}
             </div>
         </div>
