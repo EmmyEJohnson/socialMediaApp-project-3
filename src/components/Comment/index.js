@@ -50,7 +50,7 @@ const Comment = ({ id, author, content, getCommentsAgain, commentId }) => {
         )}
       </span>
       <span className="comment-buttons">
-        <button onClick={handleEdit}>{isEditing ? 'SUBMIT' : 'editme'}</button>
+        <button onClick={handleEdit}>{isEditing ? 'SUBMIT' : 'EDIT'}</button>
         <button onClick={handleDelete}>DELETE</button>
       </span>
     </div>

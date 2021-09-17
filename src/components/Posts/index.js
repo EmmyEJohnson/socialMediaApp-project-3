@@ -7,9 +7,6 @@ import PostsForm from '../PostsForm';
 import * as MemePostService from '../../api/MemePostService';
 import axios from 'axios';
 import './styles.css';
-// TEST ADD
-import { func, string, array } from 'prop-types';
-
 
 const Posts = ({
   getPostsAgain,
@@ -103,16 +100,5 @@ const Posts = ({
     </div>
   );
 };
-
-// ADD
-Posts.propTypes = {
-  id: string.isRequired,
-  author: string,
-  content: string,
-  postComments: array,
-  getPostsAgain: func,
-};
-// ADD
-
 
 export default Posts;
