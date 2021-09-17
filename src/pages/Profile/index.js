@@ -1,12 +1,12 @@
 import React from 'react';
 import Logout from '../../components/Logout';
-import Posts from '../../components/Posts';
+// import Posts from '../../components/Posts';
+import PostsForm from '../../components/PostsForm';
 
 const Profile = () => {
   return (
     <div>
-      <h1>Profile</h1>
-      <Posts />
+      <PostsForm />
       <Logout />
     </div>
   );
