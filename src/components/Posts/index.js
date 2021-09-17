@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
-import * as MemePostService from '../../api/MemePostService';
+import Comment from './Comment';
+import CommentForm from './CommentForm';
+import Likes from './Likes';
+import Dislike from './Dislike';
+// import * as MemePostService from '../../api/MemePostService';
 import axios from 'axios';
 import "./styles.css";
 
