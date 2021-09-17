@@ -20,10 +20,11 @@ const PostsForm = ({getPostsAgain}) => {
   //upload the image
   const handleUpload = ({ target: { files } }) => {
     const data = new FormData();
-    console.log(files);
+    // console.log(files);
     data.append('image', files[0]);
     data.append('name', files.name);
-    data.append('caption', files.caption);
+    data.append('caption', caption);
+    // console.log(data);
     setFormData(data);
   };
 
@@ -52,6 +53,7 @@ const PostsForm = ({getPostsAgain}) => {
         setTimeout(() => {
           console.log(res.data.memepost);
           setInfo(res.data.memepost);
+          setCaption(res.data.caption);
           setProgressPercent(0);
         }, 1000);
       })
@@ -98,7 +100,7 @@ const PostsForm = ({getPostsAgain}) => {
         alt={`${info.name}`}
         style={{ width: '359px' }}
       />
-      <p>{caption}</p>
+      <p>{info.caption}</p>
       </div>
     </form>
     </div>
