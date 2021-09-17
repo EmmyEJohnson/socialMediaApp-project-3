@@ -7,6 +7,9 @@ import PostsForm from '../PostsForm';
 import * as MemePostService from '../../api/MemePostService';
 import axios from 'axios';
 import './styles.css';
+// TEST ADD
+import { func, string, array } from 'prop-types';
+
 
 const Posts = ({
   getPostsAgain,
@@ -67,6 +70,7 @@ const Posts = ({
         </div>
         <div style={{ color: 'white' }}>{caption}</div>
         <button onClick={handleDelete}>DELETE</button>
+        <button onClick={handleEdit}>{isEditing ? 'SUBMIT' : 'EDIT'}</button>
         {/* <div>
           <Likes />
         </div>
@@ -99,5 +103,16 @@ const Posts = ({
     </div>
   );
 };
+
+// ADD
+Posts.propTypes = {
+  id: string.isRequired,
+  author: string,
+  content: string,
+  postComments: array,
+  getPostsAgain: func,
+};
+// ADD
+
 
 export default Posts;

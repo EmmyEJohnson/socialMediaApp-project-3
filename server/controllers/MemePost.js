@@ -96,23 +96,45 @@ const createComment = (req, res) => {
         })
         .catch(err => console.log(err))
 };
-
+/*
 const updateComment = (req, res) => {
     MemePost.findById(req.params.id)
-        .then(foundPost => {
-            if (!foundPost) return console.log("Error in Comment#update")
+        .then((foundPost => {
+            if (!foundPost) return console.log("Error in Comment#update");
 
-            const commentById = foundPost.comments.id(req.params.commentId)
+            const commentById = foundPost.comments.id(req.params.commentId);
             commentById.author = req.body.author;
-            commentById.body = req.body.body;
+            commentById.body = req.body.content; // body > content
             foundPost.save();
 
             return res.status(202).json({
                 message: "Success",
                 data: commentById,
             });
-        })
+    })
 };
+*/
+const updateComment = (req, res) => {
+    db.Post.findById(req.params.id).then((foundPost) => {
+        if (!foundPost) return console.log("Error in Comment#update");
+
+        const commentById = foundPost.comments.id(req.params.commentId);
+        commentById.author = req.body.author;
+        commentById.content = req.body.content;
+        foundPost.save();
+
+        return res.status(202).json({
+            message: "Success",
+            data: commentById,
+        });
+    });
+};
+
+
+
+
+
+
 
 const destroy = (req, res) => {
     MemePost.findByIdAndDelete(req.params.id, (err, deletedPost) => {

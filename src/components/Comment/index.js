@@ -9,7 +9,7 @@ const Comment = ({ id, author, content, getCommentsAgain, commentId }) => {
 
   const handleEdit = async () => {
     setIsEditing(!isEditing);
-
+    console.log("Test - edit!")
     if (isEditing) {
       let editedPost = {
         author: editedAuthor,
@@ -45,12 +45,12 @@ const Comment = ({ id, author, content, getCommentsAgain, commentId }) => {
             value={editedContent}
             type="text"
             name="content"
-            placeholder="content"
+            placeholder="CONTENT"
           />
         )}
       </span>
       <span className="comment-buttons">
-        <button onClick={handleEdit}>{isEditing ? 'SUBMIT' : 'EDIT'}</button>
+        <button onClick={handleEdit}>{isEditing ? 'SUBMIT' : 'editme'}</button>
         <button onClick={handleDelete}>DELETE</button>
       </span>
     </div>
@@ -59,7 +59,6 @@ const Comment = ({ id, author, content, getCommentsAgain, commentId }) => {
 
 Comment.propTypes = {
   id: string.isRequired,
-  author: string.isRequired,
   content: string.isRequired,
   commentId: string.isRequired,
   getPostsAgain: func,
