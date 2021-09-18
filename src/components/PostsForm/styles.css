@@ -11,7 +11,8 @@ p {
 }
 
 .PostsForm-inputs {
-  display: inline;
+ text-align: center;
+ 
 }
 
 .caption-input {
@@ -20,13 +21,13 @@ p {
 }
 
 .choose-file {
-  margin-bottom: 1%;
   font-size: 12px;
 }
 
 .postform-submit-btn {
-  font-size: 14px;
+  font-size: 18px;
   color: red;
   background-color: transparent;
   border-color: transparent;
+  margin-top: 1%;
 }

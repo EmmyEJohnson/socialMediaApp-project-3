@@ -87,6 +87,7 @@ const PostsForm = ({getPostsAgain}) => {
         style={{width: "300px"}}
         />
       </div>
+  
       <div>
         <input className="choose-file"
         onChange={handleUpload}

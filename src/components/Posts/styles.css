@@ -3,11 +3,13 @@
 }
 
 .post-container {
+  position: relative;
   height: 400px;
   width: 800px;
   border: 1px solid white;
   border-radius: 0.5rem;
   margin: 1%;
+  margin-right: 50%;
 }
 
 .post-body {
@@ -18,10 +20,10 @@
   margin: 1% 0 0 2%;
 }
 
-.post-side {
+/* .post-side {
   display: flex;
   justify-content: flex-end;
-}
+} */
 
 .post-caption {
   margin-left: 20%;
@@ -50,9 +52,13 @@
 }
 
 .comment-section {
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 #chat-section {
-  margin-left: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }

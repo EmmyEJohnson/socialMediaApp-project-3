@@ -1,7 +1,7 @@
 .user-comments-conatiner {
-  display: flex;
-  /* align-items: ; */
+  padding: 5%;
 }
+
 label {
   font-size: 12px;
   color: aliceblue;
