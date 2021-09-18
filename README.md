@@ -76,14 +76,19 @@ We wanted to create a space for people to create memes in real time with other e
       
 Memeify allows users to upload a picture, and memeify it by creating a caption (comment). Users can add their own comment to the image, creating a meme (image + comment). Users may like/dislike the comments to determine which meme is best.  
 
+
 # Technologies Used: React, Express, bcryptjs, jsonwebtoken, mongoose, MongoDB Atlas, Multer, axios, downloadjs, HTML, CSS, validator, passport
+
 
 # Getting Started:#
 https://memeify-app.herokuapp.com/
+
 https://trello.com/b/tsL1x0vv/unit-3-project
+
 
 # Unsolved Problems: #
 User experience improvements: Login button persists after login/register; deployed development and not production; 
+
 
 # Future Enhancements: #
 Terms of Service on Registration; self-moderation credentials to allow users to remove harmful or unwanted comments from their own postings; quality of life improvements (fonts, profile page with list of own posts and comments, like functionality (likes/dislikes are in the code, but are only displayed on posts, not on comments); most liked/disliked memes/comments; warnings/guidelines for files that are too large/wrong format.
