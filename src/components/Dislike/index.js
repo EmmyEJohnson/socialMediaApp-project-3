@@ -29,7 +29,6 @@ function Dislikes() {
              <button disabled={disable} onClick={handleClick}
             ><DislikeTwoTone />
             <p id="downvote">This post has {disLikes} dislike(s)</p>
-            <p id="no-friends">...and you have no friends</p>
             </button>
         </div>
     )
