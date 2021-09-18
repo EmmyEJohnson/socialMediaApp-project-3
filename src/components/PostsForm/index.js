@@ -56,6 +56,7 @@ const PostsForm = ({getPostsAgain}) => {
           setCaption(res.data.caption);
           setProgressPercent(0);
         }, 1000);
+        getPostsAgain();
       })
       .catch((err) => {
         console.log(err.response);
@@ -99,13 +100,13 @@ const PostsForm = ({getPostsAgain}) => {
           {' '}
           Submit{' '}
         </button>
-        <img
+        {/* <img
         className="mt-3"
         src={`http://localhost:5000/${info.image}`}
         alt={`${info.name}`}
         style={{ width: '359px' }}
       />
-      <p>{info.caption}</p>
+      <p>{info.caption}</p> */}
       </div>
     </form>
     </div>
