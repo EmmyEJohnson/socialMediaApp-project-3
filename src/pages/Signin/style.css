@@ -1,7 +1,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box !important; }
+  box-sizing: border-box !important; 
+}
 
 .signIn-h1 {
   text-align: center;
@@ -25,9 +26,9 @@
   width: 590px;
   height: 36px;
   margin-top: 4%;
-
+  
   /* Body H4 */
-
+  
   font-family: Montserrat;
   text-align: center;
   font-style: normal;
@@ -40,6 +41,7 @@
 }
 
 .signIn-email {
+  color: black;
   font-size: 20px;
   width: 494px;
   height: 50px;
@@ -53,6 +55,7 @@
 }
 
 .signIn-password {
+  color: black;
   width: 494px;
   height: 50px;
   left: 78px;
@@ -65,12 +68,12 @@
 }
 
 .signIn-button {
-  font-size: 30px;
+  font-size: 26px;
   width: 130px;
   height: 40px;
   left: 78px;
   top: 335px;
-  margin-top: 8%;
+  margin-top: 6%;
   border-radius: 0.5rem;
   background-color: transparent;
   border-color: transparent;
