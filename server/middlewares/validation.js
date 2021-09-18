@@ -14,15 +14,17 @@ module.exports = (req, res, next) => {
   let image = req.file.path;
   let name = req.body.name;
 
-  //check image type we accept png || jpg || jpeg
+  //check image type we accept png || jpg || jpeg || heic
 
   if (
     !req.file.mimetype.includes('jpeg') &&
     !req.file.mimetype.includes('png') &&
     !req.file.mimetype.includes('jpg') &&
+    !req.file.mimetype.includes('heic') &&
     !req.file.mimetype.includes('JPEG') &&
     !req.file.mimetype.includes('PNG') &&
-    !req.file.mimetype.includes('JPG')
+    !req.file.mimetype.includes('JPG') &&
+    !req.file.mimetype.includes('HEIC')
   ) {
     //first remove file
     fs.unlinkSync(image);

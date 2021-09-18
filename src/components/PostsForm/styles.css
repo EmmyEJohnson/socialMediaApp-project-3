@@ -1,4 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important; 
+  color: white;
+}
+
 p {
   color: white;
   text-align: center;
+}
+
+.PostsForm-inputs {
+  display: inline;
+}
+
+.caption-input {
+  display: inline;
+}
+
+.postform-submit-btn {
+  font-size: 14px;
+  color: red;
+  background-color: transparent;
+  border-color: transparent;
 }

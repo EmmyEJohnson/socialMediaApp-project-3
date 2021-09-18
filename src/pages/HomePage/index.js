@@ -4,10 +4,12 @@ import PostsForm from '../../components/PostsForm';
 import * as MemePostService from '../../api/MemePostService';
 import { getUser } from '../../api/UserService';
 import Logout from '../../components/Logout';
+import './styles.css'
 
 const HomePage = () => {
   const [posts, setPosts] = useState([]);
   const [user] = useState(getUser);
+
 
   async function fetchPosts() {
     let res = await MemePostService.getAll();
@@ -24,6 +26,7 @@ const HomePage = () => {
   return (
     <div>
       <div>
+        <div className="homepage-logout-btn"><Logout /></div>
         <PostsForm getPostsAgain={() => fetchPosts()} />
         {posts.map((post) => {
           return (
@@ -40,7 +43,6 @@ const HomePage = () => {
             />
           );
         })}
-        <Logout />
       </div>
     </div>
   );

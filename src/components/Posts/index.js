@@ -55,9 +55,9 @@ const Posts = ({
 
   return (
     <div>
-      <h1 style={{ color: 'white' }}>
+      {/* <h1 style={{ color: 'white' }}> */}
         {/* post body with the images comment and likes goes in here */}
-      </h1>
+      {/* </h1> */}
       <div className="post-container">
         <div className="post-body">
           <img
@@ -65,8 +65,10 @@ const Posts = ({
             style={{ width: '359px' }}
           />{' '}
         </div>
+    
         <div style={{ color: 'white' }}>{caption}</div>
-        <button onClick={handleDelete}>DELETE</button>
+        <button className="delete-post-btn" onClick={handleDelete}> Delete Post </button><br></br><br></br>
+        
         {/* <div>
           <Likes />
         </div>
