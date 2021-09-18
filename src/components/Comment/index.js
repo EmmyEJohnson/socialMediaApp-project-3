@@ -28,10 +28,10 @@ const Comment = ({ id, author, content, getCommentsAgain, commentId }) => {
 
   return (
     <div className="comment">
-      <span className="entry" style={{ color: 'white' }}>
-        {!isEditing && <b style={{ color: 'white' }}>{author}</b>}
+      <span className="entry" style={{ color: 'red' }}>
+        {!isEditing && <b style={{ color: 'red' }}>{author}</b>}
         {isEditing && (
-          <input
+          <input className="author-comment"
             onChange={(e) => setAuthor(e.target.value)}
             value={editedAuthor}
             type="text"
@@ -41,7 +41,7 @@ const Comment = ({ id, author, content, getCommentsAgain, commentId }) => {
         )}
         :{!isEditing && <span style={{ color: 'white' }}> {content}</span>}
         {isEditing && (
-          <input
+          <input className="comment-content"
             onChange={(e) => setContent(e.target.value)}
             value={editedContent}
             type="text"

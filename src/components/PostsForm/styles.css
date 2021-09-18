@@ -15,7 +15,13 @@ p {
 }
 
 .caption-input {
-  display: inline;
+  font-size: 12px;
+  margin-bottom: .5%;
+}
+
+.choose-file {
+  margin-bottom: 1%;
+  font-size: 12px;
 }
 
 .postform-submit-btn {

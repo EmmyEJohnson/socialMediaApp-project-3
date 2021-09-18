@@ -5,10 +5,15 @@
 }
 
 .submitEdit-comment-btns {
-  color: red;
+  color: greenyellow;
   background: url('https://icons555.com/images/icons-red/image_icon_edit_user_pic_512x512.png');
   background-color: transparent;
   border-color: transparent;
   margin-left: 2%;
-  font-size: 10px;
+  font-size: 12px;
 }
+
+.comment {
+  font-size: 12px;
+}
+
