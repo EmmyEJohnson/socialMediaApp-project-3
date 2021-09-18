@@ -104,7 +104,7 @@ const updateComment = (req, res) => {
 
             const commentById = foundPost.comments.id(req.params.commentId)
             commentById.author = req.body.author;
-            commentById.body = req.body.body;
+            commentById.content = req.body.content;
             foundPost.save();
 
             return res.status(202).json({
