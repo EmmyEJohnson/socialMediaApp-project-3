@@ -55,48 +55,56 @@ const Posts = ({
 
   return (
     <div>
-      {/* <h1 style={{ color: 'white' }}> */}
-        {/* post body with the images comment and likes goes in here */}
-      {/* </h1> */}
+
       <div className="post-container">
+
+        <div className="post-alignment">
+      <div className="likes-dislikes">
+        <div id="likes">
+          <Likes />
+        </div>
+        <div id="dislike">
+          <Dislike />
+        </div>
+        </div>
+
         <div className="post-body">
           <img
             src={`http://localhost:5000/${image}`}
             style={{ width: '359px' }}
-          />{' '}
+            />{' '}
         </div>
-    
-        <div style={{ color: 'white' }}>{caption}</div>
-        <button className="delete-post-btn" onClick={handleDelete}> Delete Post </button><br></br><br></br>
+            <div className="post-caption" style={{ color: 'white' }}>{caption}</div>
         
-        {/* <div>
-          <Likes />
+
+        <button className="delete-post-btn" onClick={handleDelete}> Delete Post </button><br></br><br></br>
         </div>
-        <div>
-          <Dislike />
-        </div> */}
-        <div>
-          {/* <h3>Comments</h3> */}
+
+        <div className="comment-section">
+
+          <div id="chat-section">
+          <h6 id="chat"> Chat:</h6>
           {comments.map((comment) => {
             // console.log("WHICH DATA AM I USING: ", comment);
             return (
               <Comment
-                author={comment.author}
-                content={comment.content}
-                key={comment._id}
-                commentId={comment._id}
-                id={id}
-                getCommentsAgain={(id) => fetchComments(id)}
+              author={comment.author}
+              content={comment.content}
+              key={comment._id}
+              commentId={comment._id}
+              id={id}
+              getCommentsAgain={(id) => fetchComments(id)}
               />
-            );
-          })}
-        </div>
+              );
+            })}
+            </div>
         <CommentForm
           id={id}
           user={user}
           getPostsAgain={() => getPostsAgain()}
           getCommentsAgain={(id) => fetchComments(id)}
-        />
+          />
+          </div>
       </div>
     </div>
   );

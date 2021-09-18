@@ -1,7 +1,7 @@
 .user-comments-conatiner {
-  display: flex;
-  /* align-items: ; */
+  padding: 5%;
 }
+
 label {
   font-size: 12px;
   color: aliceblue;
@@ -10,6 +10,7 @@ label {
 
 .username-input {
   font-size: 12px;
+  color: black;
 }
 
 .comment-input {

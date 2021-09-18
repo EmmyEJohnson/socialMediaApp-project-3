@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import {LikeTwoTone} from '@ant-design/icons';
+import './styles.css';
 
 // const thumbsUp = {
 //     backgroundPosition: 'center',
@@ -27,8 +28,9 @@ function Likes() {
     return (
         <div>
             <button  disabled={disable} onClick={handleClick}
-            ><LikeTwoTone /></button>
-            <p>This post has {upVotes} likes!</p>
+            ><LikeTwoTone />
+            <p id="upvote">This post has {upVotes} like(s)!</p>
+            </button>
         </div>
     )
 }

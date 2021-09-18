@@ -77,21 +77,24 @@ const PostsForm = ({getPostsAgain}) => {
     <div>
     <form onSubmit={handleSubmit} className="PostsForm-inputs">
       <div>
-      <input className="caption-input"
+      <textarea className="caption-input"
         onChange={(e)=> setCaption(e.target.value)}
         value={caption}
         type="text"
+        rows="3"
         name="caption"
         placeholder="Enter a caption for your Meme-photo."
         style={{width: "300px"}}
         />
       </div>
+  
       <div>
-        <input
+        <input className="choose-file"
         onChange={handleUpload}
         type="file"
+        prompt="Upload Image"
         accept=".png, .jpeg, .jpg, .heic"
-        />
+        /><br></br>
          <button type="submit" className="postform-submit-btn">
           {' '}
           Submit{' '}

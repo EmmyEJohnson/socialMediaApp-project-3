@@ -3,11 +3,13 @@
 }
 
 .post-container {
+  position: relative;
   height: 400px;
   width: 800px;
   border: 1px solid white;
   border-radius: 0.5rem;
   margin: 1%;
+  margin-right: 50%;
 }
 
 .post-body {
@@ -15,19 +17,48 @@
   width: 45%;
   border: 1px solid white;
   border-radius: 0.5rem;
-  margin: 7% 0 0 2%;
+  margin: 1% 0 0 2%;
 }
 
-.post-side {
+/* .post-side {
   display: flex;
   justify-content: flex-end;
+} */
+
+.post-caption {
+  margin-left: 20%;
+  margin-bottom: -1%;
 }
 
 .delete-post-btn {
-  margin-left: 20%;
-  margin-top: 1%;
+  margin-left: 21%;
+  margin-top: -1%;
   color: red;
   font-size: 10px;
   background-color: transparent;
   border-color: transparent;
+}
+
+.likes-dislikes {
+ display: flex;
+ flex-direction: row;
+ margin-top: 2%;
+ margin-left: 11%;
+}
+
+#likes {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.comment-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#chat-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
