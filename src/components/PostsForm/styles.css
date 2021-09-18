@@ -1,7 +1,9 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box !important; }
+  box-sizing: border-box !important; 
+  color: white;
+}
 
 p {
   color: white;
@@ -9,6 +11,10 @@ p {
 }
 
 .PostsForm-inputs {
+  display: inline;
+}
+
+.caption-input {
   display: inline;
 }
 

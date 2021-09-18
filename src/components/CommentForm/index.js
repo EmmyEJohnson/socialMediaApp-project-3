@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import * as MemePostService from '../../api/MemePostService';
 import { func, string } from 'prop-types';
+import './styles.css';
 
 const CommentForm = ({ id, getCommentsAgain, getPostsAgain }) => {
   const [author, setAuthor] = useState('');
@@ -22,22 +23,28 @@ const CommentForm = ({ id, getCommentsAgain, getPostsAgain }) => {
   };
 
   return (
-    <div className="">
-      <input
+    <div className="user-comments-container">
+      <label>Leave Potential Meme Comments Here:</label><br></br>
+      <input className="username-input"
         onChange={(e) => setAuthor(e.target.value)}
         value={author}
         type="text"
         name="author"
-        placeholder="AUTHOR"
+        placeholder="User Name"
+        style={{width: "215px"}}
       />
-      <input
+      <br></br>
+      <textarea className="comment-input"
         onChange={(e) => setContent(e.target.value)}
         value={content}
         type="text"
+        rows="3"
         name="body"
-        placeholder="Comment Here"
+        placeholder="Leave comments here..."
+        style={{width: "215px", height: "50px"}}
       />
-      <button onClick={handleSubmit}>Add Comment</button>
+      <br></br>
+      <button className="addcomment-btn" onClick={handleSubmit}> Add Comment </button>
     </div>
   );
 };

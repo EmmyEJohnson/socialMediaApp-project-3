@@ -77,7 +77,7 @@ const PostsForm = ({getPostsAgain}) => {
     <div>
     <form onSubmit={handleSubmit} className="PostsForm-inputs">
       <div>
-      <input
+      <input className="caption-input"
         onChange={(e)=> setCaption(e.target.value)}
         value={caption}
         type="text"

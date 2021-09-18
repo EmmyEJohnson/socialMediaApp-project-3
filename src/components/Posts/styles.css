@@ -22,3 +22,12 @@
   display: flex;
   justify-content: flex-end;
 }
+
+.delete-post-btn {
+  margin-left: 20%;
+  margin-top: 1%;
+  color: red;
+  font-size: 10px;
+  background-color: transparent;
+  border-color: transparent;
+}

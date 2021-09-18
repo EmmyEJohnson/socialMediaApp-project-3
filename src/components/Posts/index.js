@@ -65,8 +65,10 @@ const Posts = ({
             style={{ width: '359px' }}
           />{' '}
         </div>
+    
         <div style={{ color: 'white' }}>{caption}</div>
-        <button onClick={handleDelete}>DELETE</button>
+        <button className="delete-post-btn" onClick={handleDelete}> Delete Post </button><br></br><br></br>
+        
         {/* <div>
           <Likes />
         </div>
