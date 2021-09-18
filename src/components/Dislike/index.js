@@ -1,5 +1,6 @@
 import React, { useState, useEffect} from 'react'
 import {DislikeTwoTone} from '@ant-design/icons';
+import './styles.css';
 
 
 // const thumbsDown = {
@@ -26,8 +27,10 @@ function Dislikes() {
     return (
         <div>
              <button disabled={disable} onClick={handleClick}
-            ><DislikeTwoTone /></button>
-            <p>This post has {disLikes} Dislikes =(</p>
+            ><DislikeTwoTone />
+            <p id="downvote">This post has {disLikes} dislike(s)</p>
+            <p id="no-friends">...and you have no friends</p>
+            </button>
         </div>
     )
 }
