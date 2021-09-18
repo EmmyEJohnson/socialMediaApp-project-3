@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Route, Switch } from 'react-router-dom';
 import Register from '../../pages/Register';
 import Signin from '../../pages/Signin';
-import Profile from '../../pages/Profile';
+// import Profile from '../../pages/Profile';
 import HomePage from '../../pages/HomePage';
 
 const Nav = () => {

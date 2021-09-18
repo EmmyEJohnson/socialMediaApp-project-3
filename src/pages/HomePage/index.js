@@ -10,9 +10,6 @@ const HomePage = () => {
   const [posts, setPosts] = useState([]);
   const [user] = useState(getUser);
 
-  React.useEffect(() => {
-    document.getElementsByClassName("navbar")[0].style.display = "none";
-  }, []);
 
   async function fetchPosts() {
     let res = await MemePostService.getAll();

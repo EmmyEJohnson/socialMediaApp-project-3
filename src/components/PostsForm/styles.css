@@ -8,7 +8,13 @@ p {
   text-align: center;
 }
 
+.PostsForm-inputs {
+  display: inline;
+}
+
 .postform-submit-btn {
   font-size: 14px;
-  align-items: center;
+  color: red;
+  background-color: transparent;
+  border-color: transparent;
 }

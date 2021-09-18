@@ -83,12 +83,14 @@ const PostsForm = ({getPostsAgain}) => {
         type="text"
         name="caption"
         placeholder="Enter a caption for your Meme-photo."
+        style={{width: "300px"}}
         />
       </div>
       <div>
         <input
         onChange={handleUpload}
         type="file"
+        accept=".png, .jpeg, .jpg, .heic"
         />
          <button type="submit" className="postform-submit-btn">
           {' '}
