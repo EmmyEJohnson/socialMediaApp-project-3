@@ -5,14 +5,14 @@ import './App.css';
 
 // define our Welcome functional component
 function Welcome() {
-  const isLoggedIn = true;
-  const isLoggedOut = true;
+  // const isLoggedIn = true;
+  // const isLoggedOut = true;
   return (
       <div>
         {/* show the logout button if the user is logged in */}
        {/* {isLoggedIn && <a href="/logout">Logout</a>} */}
        {/* show the login button if the user is logged out */}
-      {!isLoggedIn && <a href="/login">Login</a>}
+      {/* {!isLoggedIn && <a href="/login">Login</a>} */}
 
     <div>
       <Nav />

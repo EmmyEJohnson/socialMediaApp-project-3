@@ -50,6 +50,7 @@
 }
 
 .signUp-firstName {
+  color: black;
   width: 237px;
   height: 40px;
   left: 78px;
@@ -62,6 +63,7 @@
 }
 
 .signUp-lastName {
+  color: black;
   width: 237px;
   height: 40px;
   left: 330px;
@@ -74,6 +76,7 @@
 }
 
 .signUp-email {
+  color: black;
   width: 494px;
   height: 40px;
   left: 78px;
@@ -86,6 +89,7 @@
 }
 
 .signUp-password {
+  color: black;
   width: 494px;
   height: 40px;
   left: 78px;
