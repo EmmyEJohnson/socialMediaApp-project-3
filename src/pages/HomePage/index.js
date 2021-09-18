@@ -10,6 +10,10 @@ const HomePage = () => {
   const [posts, setPosts] = useState([]);
   const [user] = useState(getUser);
 
+  React.useEffect(() => {
+    document.getElementsByClassName("navbar")[0].style.display = "none";
+  }, []);
+
   async function fetchPosts() {
     let res = await MemePostService.getAll();
     if (res.status === 200) {
@@ -25,11 +29,12 @@ const HomePage = () => {
   return (
     <div>
       <div>
+        <div className="homepage-logout-btn"><Logout /></div>
         <PostsForm getPostsAgain={() => fetchPosts()} />
         {posts.map((post) => {
           return (
-            <Posts className="homepage-posts"
-              user={user} 
+            <Posts
+              user={user}
               author={post.author}
               caption={post.caption}
               content={post.content}
@@ -41,7 +46,6 @@ const HomePage = () => {
             />
           );
         })}
-        <Logout />
       </div>
     </div>
   );

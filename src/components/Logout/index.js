@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
+import './styles.css';
 
 const Logout = () => {
   const history = useHistory();
@@ -11,7 +12,7 @@ const Logout = () => {
 
   return (
     <div>
-      <button onClick={handleLogout}>Logout</button>
+      <button className="logout-btn" onClick={handleLogout}>Logout</button>
     </div>
   );
 };

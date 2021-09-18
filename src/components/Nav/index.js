@@ -13,7 +13,7 @@ const Nav = () => {
   };
   return (
     <div>
-      <nav style={navStyle}>
+      <nav className="navbar" style={navStyle}>
         <Link to="/">Home</Link>
         <Link to="/register">Register</Link>
         <Link to="/signin">Login!</Link>
