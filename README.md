@@ -77,7 +77,8 @@ We wanted to create a space for people to create memes in real time with other e
 Memeify allows users to upload a picture, and memeify it by creating a caption (comment). Users can add their own comment to the image, creating a meme (image + comment). Users may like/dislike the comments to determine which meme is best.  
 
 
-# Technologies Used: React, Express, bcryptjs, jsonwebtoken, mongoose, MongoDB Atlas, Multer, axios, downloadjs, HTML, CSS, validator, passport
+# Technologies Used: #
+React, Express, bcryptjs, jsonwebtoken, mongoose, MongoDB Atlas, Multer, axios, downloadjs, HTML, CSS, validator, passport
 
 
 # Getting Started:#
